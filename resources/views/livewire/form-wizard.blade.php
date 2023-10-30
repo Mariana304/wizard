@@ -23,6 +23,10 @@
                 @error('data.1.nombre')
                     <p class="text-red-500 text-sm">{{ $message }}</p>
                 @enderror
+
+                <div class="mt-8">
+                    <x-forms.tinymce-editor />
+                </div>
             </div>
         @elseif ($step === 2)
             <div>
@@ -41,7 +45,6 @@
                 <p class="text-red-500 text-sm">{{ $message }}</p>
             @enderror
         @endif
-
         @if ($step >= 3)
             <div class="mt-4 flex justify-between">
                 <div></div>
@@ -73,4 +76,7 @@
         </div>
     @endif
 </div>
+
+
+
 </div>
